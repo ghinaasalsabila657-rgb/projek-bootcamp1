@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website | Ghina S</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Ghina Salsabila</h1>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <img
+          src="images/profilku.png"
+          alt="Foto Profil Ghina Salsabila"
+          class="profile-photo"
+        />
+        <h2>Ghina Salsabila</h2>
+        <p class="tagline">
+          Pengembang Web yang Bersemangat Menciptakan Pengalaman Digital yang
+          Menarik.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h3>Tentang Saya 👋</h3>
+        <p>
+          Saya adalah seorang mahasiswa dengan minat yang kuat dalam
+          pengembangan teknologi dan Artificial Intelligence. Saya berfokus pada
+          Front-end Development dan senang mempelajari teknologi baru untuk
+          memecahkan masalah yang kompleks.
+        </p>
+        <br /><br />
+        <h4>Hobi, Minat, & Kelebihan:</h4>
+        <ul class="interest-list">
+          <li><i class="fas fa-code"></i> Coding & Pemrograman</li>
+          <li><i class="fas fa-book-open"></i> Belajar Sains</li>
+          <li>
+            <i class="fas fa-lightbulb"></i> Berpikir Kritis & Problem Solving
+          </li>
+          <li><i class="fas fa-globe"></i> Belajar Bahasa Asing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h3>Keahlian & Minat</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i class="fab fa-html5 skill-icon"></i>
+            <h4>HTML & CSS</h4>
+            <p>Membangun struktur dasar dan gaya visual yang bersih.</p>
+          </div>
+          <div class="skill-card">
+            <i class="fab fa-js-square skill-icon"></i>
+            <h4>JavaScript</h4>
+            <p>Mengimplementasikan interaktivitas pada website.</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-pen-ruler skill-icon"></i>
+            <h4>UI/UX Design</h4>
+            <p>Merancang antarmuka yang intuitif dan menarik.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h3>Hubungi Saya ✉️</h3>
+        <p>Tertarik untuk bekerja sama? Silakan hubungi saya melalui:</p>
+        <div class="contact-methods">
+          <a
+            href="mailto: ghinaasalsabila657@gmail.com"
+            class="contact-link"
+            aria-label="Email saya"
+          >
+            <i class="fas fa-envelope contact-icon"></i>
+            <span>ghinaasalsabila657@gmail.com</span>
+          </a>
+          <a
+            href="https://wa.me/6285264349416?text=Halo,%20saya%20tertarik%20dengan%20website%20Anda."
+            target="_blank"
+            class="contact-link"
+            aria-label="WhatsApp Saya"
+          >
+            <i class="fab fa-whatsapp contact-icon"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">Copyright text: &copy; 2025 Ghina Salsabila</p>
+        <p class="additional-info">Dibuat dengan ❤️ dan semangat.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector(".hamburger").addEventListener("click", () => {
+        document.querySelector(".nav-links").classList.toggle("active");
+      });
+      // Opsional: Tutup menu saat link diklik (untuk mobile)
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.querySelector(".nav-links").classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
