@@ -29,16 +29,16 @@
     <section id="home" class="hero-section">
       <div class="container hero-content">
         <div class="hero-text">
-          <p class="greeting">Halo, Salam Kenal! ✨</p>
+          <p class="greeting">Hello, Friends! ✨</p>
           <h1 class="main-title">
-            Saya <span class="name">Ghina Salsabila</span>
+            I'm <span class="name">Ghina Salsabila</span>
           </h1>
           <p class="tagline">
-            Pengembang web yang bersemangat menciptakan pengalaman digital yang
-            cantik dan intuitif.
+            Web developer passionate about creating digital experiences 
+            beautiful and intuitive.
           </p>
           <a href="#about" class="btn primary-btn"
-            >Kenali Saya Lebih Lanjut <i class="fas fa-arrow-right"></i
+            >Get to Know Me Better <i class="fas fa-arrow-right"></i
           ></a>
         </div>
 
@@ -50,26 +50,25 @@
 
     <section id="about" class="about-section">
       <div class="container">
-        <h2>Tentang Saya 🌸</h2>
+        <h2>About Me 🌸</h2>
         <p class="description-text">
-          Saya adalah seorang mahasiswi yang memiliki ketertarikan mendalam pada
-          teknologi dan desain antarmuka pengguna. Fokus utama saya adalah
-          Front-end Development, di mana saya menikmati proses mengubah ide
-          desain menjadi website yang interaktif dan <i>user-friendly</i>. Saya
-          percaya bahwa kombinasi antara logika pemrograman yang kuat dan
-          estetika yang lembut dapat menghasilkan karya digital yang berkesan.
+         I am a student with a deep interest in technology and user interface design. 
+         My primary focus is front-end development, where I enjoy the process of 
+         transforming design ideas into interactive and user-friendly websites. 
+         I believe that the combination of strong programming logic and soft aesthetics 
+         can produce memorable digital creations.
         </p>
 
         <h3 class="interest-title">
-          Hobi, Minat, & Kelebihan :
+          Hobbies & Interests:
         </h3>
         <ul class="interest-list">
-          <li><i class="fas fa-palette"></i> Desain Grafis</li>
-          <li><i class="fa-solid fa-gears"></i> Menjelajahi Teknologi Baru</li>
+          <li><i class="fas fa-palette"></i> Graphic Design</li>
+          <li><i class="fa-solid fa-gears"></i> Exploring New Technologies</li>
           <li>
-            <i class="fas fa-lightbulb"></i> Berpikir Kreatif
+            <i class="fas fa-lightbulb"></i> Creative Thinking
           </li>
-          <li><i class="fas fa-globe"></i> Belajar Bahasa Asing</li>
+          <li><i class="fas fa-globe"></i> Learn Foreign Languages</li>
           <li><i class="fas fa-book-open"></i> Journaling</li>
         </ul>
       </div>
@@ -77,14 +76,13 @@
 
     <section id="skills" class="skills-section">
       <div class="container">
-        <h2>Keahlian Utama 💻</h2>
+        <h2>Core Skills 💻</h2>
         <div class="skills-grid">
           <div class="skill-card">
             <i class="fab fa-html5 skill-icon"></i>
             <h4>HTML & CSS</h4>
             <p>
-              Fondasi utama dalam membangun struktur dan estetika visual website
-              yang bersih.
+              The main foundation for building a clean website structure and visual aesthetics.
             </p>
           </div>
 
@@ -92,8 +90,7 @@
             <i class="fab fa-js-square skill-icon"></i>
             <h4>JavaScript</h4>
             <p>
-              Menciptakan interaktivitas, animasi, dan logika fungsional di sisi
-              klien.
+              Creating interactivity, animation, and functional logic on the client side.
             </p>
           </div>
 
@@ -101,20 +98,75 @@
             <i class="fas fa-vector-square skill-icon"></i>
             <h4>UI/UX Design</h4>
             <p>
-              Merancang antarmuka yang tidak hanya cantik tetapi juga mudah
-              digunakan (intuitif).
+              Designing an interface that is not only beautiful but also easy 
+              used (intuitive).
             </p>
           </div>
         </div>
       </div>
     </section>
 
+    <div id="widget-center">
+      <section id="widget" class="sentiment-widget">
+     <h3>What's the Vibe? 🤔</h3>
+     <h4>Click here and see how AI interprets the emotional tone!</h4>
+      <i id="widget-center" class="fa-solid fa-arrow-down"></i>
+       <!-- PART 1: THE TRIGGER BUTTON -->
+      <button class="sentiment-trigger-btn" onclick="toggleSentimentModal()">
+        ✨ Analyze Sentiment
+      </button>
+    </div>
+
+
+<!-- PART 2: THE MODAL OVERLAY & WIDGET -->
+<!-- Paste this at the very bottom of your <body> tag -->
+<div id="sentimentModalOverlay" class="sentiment-modal-overlay">
+  <div class="widget-container">
+    
+    <!-- New Close Button -->
+    <button class="close-modal-btn" onclick="toggleSentimentModal()">&times;</button>
+
+    <h1>💭 Sentiment Analyzer</h1>
+    <p class="subtitle">Discover the emotional tone behind your text</p>
+
+    <div class="input-group">
+      <textarea
+        id="textInput"
+        placeholder="Type something here... (e.g., 'I absolutely love this feature!')"
+      ></textarea>
+    </div>
+
+    <button id="analyzeBtn" onclick="analyzeSentiment()">
+      Analyze Sentiment
+    </button>
+
+    <div id="loading" class="loading">Processing text...</div>
+
+    <div id="result" class="result-container">
+      <div class="sentiment-icon" id="sentimentIcon"></div>
+      <div class="sentiment-label" id="sentimentLabel"></div>
+      
+      <div class="confidence-bar">
+        <div class="confidence-label">
+           <span>Confidence Score</span>
+           <span id="confidenceLabel">0%</span>
+        </div>
+        <div class="bar-container">
+          <div class="bar-fill" id="barFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="error" class="error-message"></div>
+  </div>
+</div>
+</section>
+
     <section id="contact" class="contact-section">
       <div class="container">
-        <h2>Hubungi Saya 💌</h2>
+        <h2>Contact me 💌</h2>
         <p>
-          Tertarik berkolaborasi atau sekadar menyapa? Silakan hubungi saya
-          melalui:
+          Interested in collaborating or just saying hello? Please contact me at:
         </p>
 
         <div class="contact-methods">
@@ -150,29 +202,68 @@
     <footer class="footer">
       <div class="container">
         <p class="copyright">Copyright © 2025 Ghina Salsabila</p>
-        <p class="additional-info">Dibuat dengan ❤️ dan semangat.</p>
+        <p class="additional-info">Made with ❤️ and passion.</p>
       </div>
     </footer>
 
-    <div id="chatbot-popup" class="chatbot-popup">
-    <div class="chatbot-header">
-        <h4>GhinaBot <i class="fas fa-robot"></i></h4>
-        <button id="close-chatbot-btn" aria-label="Tutup Chatbot">&times;</button>
-    </div>
-    <div id="chat-messages" class="chat-messages">
-        <p class="bot-message">Halo! Saya GhinaBot. Ada yang ingin Anda ketahui tentang Ghina?</p>
-    </div>
+<div class="chatbot-widget">
+        <!-- Toggle Button -->
+        <button class="chatbot-toggle-btn" id="chatbotToggle">
+            🤖
+            <span class="notification-badge" id="notificationBadge">1</span>
+        </button>
 
-    <div id="chat-input-container"> 
-        <input type="text" id="chat-input" placeholder="Ketik pesan (misal: hobi, javascript, kontak)...">
-        
-        <button id="send-button" aria-label="Kirim Pesan"><i class="fas fa-paper-plane"></i></button>
-    </div>
-</div>
+        <!-- Chat Container -->
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+                <div class="assistant-avatar">🤖</div>
+                <div class="header-info">
+                    <h2>Assistant Holo</h2>
+                    <p>Online</p>
+                </div>
+                <button class="minimize-btn" id="minimizeBtn">−</button>
+            </div>
 
-<button id="open-chatbot-btn" class="open-chatbot-btn" aria-label="Buka Chatbot">
-    <i class="fas fa-comment-dots"></i>
-</button>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        Halo! Saya Assistant Holo. Ada yang bisa saya bantu hari ini?
+                    </div>
+                </div>
+                <div class="message assistant typing-indicator" id="typingIndicator">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-actions" id="quickActions">
+                <button class="action-btn" data-question="Apa skill yang dimiliki?">
+                    💡 Apa skill yang dimiliki?
+                </button>
+                <button class="action-btn" data-question="Ceritakan tentang proyekmu">
+                    📝 Ceritakan tentang proyekmu
+                </button>
+                <button class="action-btn" data-question="Bagaimana cara menghubungimu?">
+                    📧 Bagaimana cara menghubungimu?
+                </button>
+            </div>
+
+            <div class="tags-container">
+                <span class="tag">Data Science</span>
+                <span class="tag">AI Logic</span>
+            </div>
+
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ketik pesan...">
+                <button class="send-btn" id="sendBtn">➤</button>
+            </div>
+        </div>
+    </div>
 
 <script src="js/script.js"></script>
 
